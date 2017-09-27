@@ -13,7 +13,6 @@
 ###Cordova/Phonegap 安装 
 
    在线：cordova plugin add  https://github.com/Bjkb/cordova_plugin_alipay --variable PARTNER_ID=[你的商户PID可以在账户中查询]
-   （对于android系统，可以不传PARTNER_ID）
     
    本地：下载后再进行安装cordova plugin add 插件目录
    
@@ -45,5 +44,17 @@
 				 * detail.htm?spm=0.0.0.0.xdvAU6&treeId=59&articleId=103665&
 				 * docType=1) 建议商户依赖异步通知
 				 */
-   //ionic3调用插件需声明  declare  var  AliPay:any;
+   //ionic3调用插件需声明 
+   //简单集成插件支付宝支付
+   declare var AliPay: any;
+   getAlipay(options: any): Observable<any> {
+    let ops = options;
+    return Observable.create(observer => {
+      AliPay.pay(ops, result=>{
+        observer.next(result);
+      }, err=>{
+        //this.Toast(err);
+      });
+    });
+   }
 ```
