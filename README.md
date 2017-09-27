@@ -30,8 +30,7 @@
 				
     	
     //第一步：订单在服务端签名生成订单信息，具体请参考官网进行签名处理
-     var payInfo  = "xxxx"
-;
+     var payInfo  = "xxxx";
             	
     //第二步：调用支付插件        	
      AliPay.pay(payInfo,function success(e){},function error(e){});
