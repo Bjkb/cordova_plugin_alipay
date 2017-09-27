@@ -12,7 +12,7 @@
 
 ###Cordova/Phonegap 安装 
 
-   在线：cordova plugin add https://github.com/chenyuanchn/cordova-plugin-alipay.git --variable PARTNER_ID=[你的商户PID可以在账户中查询]
+   在线：cordova plugin add  https://github.com/Bjkb/cordova_plugin_alipay --variable PARTNER_ID=[你的商户PID可以在账户中查询]
    （对于android系统，可以不传PARTNER_ID）
     
    本地：下载后再进行安装cordova plugin add 插件目录
@@ -34,7 +34,7 @@
 ;
             	
     //第二步：调用支付插件        	
-     cordova.plugins.AliPay.pay(payInfo,function success(e){},function error(e){});
+     AliPay.pay(payInfo,function success(e){},function error(e){});
       
 	//e.resultStatus  状态代码  e.result  本次操作返回的结果数据 e.memo 提示信息
 	//e.resultStatus  9000  订单支付成功 ;8000 正在处理中  调用function success 
@@ -45,5 +45,5 @@
 				 * detail.htm?spm=0.0.0.0.xdvAU6&treeId=59&articleId=103665&
 				 * docType=1) 建议商户依赖异步通知
 				 */
-		  
+   //ionic3调用插件需声明  declare  var  AliPay:any;
 ```
