@@ -30,7 +30,8 @@
 				
     	
     //第一步：订单在服务端签名生成订单信息，具体请参考官网进行签名处理(parentId签名跟新版签名不一样)
-     var payInfo  = "xxxx";
+    //旧版官网： https://doc.open.alipay.com/doc2/detail?treeId=59&articleId=103663&docType=1
+     var payInfo  = "xxxx";
             	
     //第二步：调用支付插件        	
      AliPay.pay(payInfo,function success(e){},function error(e){});
