@@ -2,15 +2,15 @@
 
 ### 本cordova插件是基于支付宝支付的简单demo
 
-###主要功能
+### 主要功能
 		
  - 主要功能是：服务器把订单信息签名后，调用该插件调用支付宝sdk进行支付，支付完成后如支付成功，还要去服务端去验证是否真正支付
 	
-###准备工作
+### 准备工作
 
  - 这里我默认环境已经安装完毕，只需要进行插件安装即可
 
-###Cordova/Phonegap 安装 
+### Cordova/Phonegap 安装 
 
    在线：cordova plugin add  https://github.com/Bjkb/cordova_plugin_alipay --variable PARTNER_ID=[你的商户PID可以在账户中查询]
     
